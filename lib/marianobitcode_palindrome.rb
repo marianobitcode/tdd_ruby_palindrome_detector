@@ -1,6 +1,6 @@
 require "marianobitcode_palindrome/version"
 
-class String
+module MarianobitcodePalindrome
 
   # Returns true for a palindrome, false otherwise.
   def palindrome?
@@ -26,7 +26,15 @@ class String
 
     # Returns content for palindrome testing.
     def processed_content
-      self.scan(/[a-z]/i).join.downcase
+      self.to_s.scan(/[a-z\d]/i).join.downcase
     end
 
+end
+
+class String
+  include MarianobitcodePalindrome
+end
+
+class Fixnum
+  include MarianobitcodePalindrome
 end

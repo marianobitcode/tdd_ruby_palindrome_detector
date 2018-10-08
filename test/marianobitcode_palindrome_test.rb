@@ -20,12 +20,20 @@ class MarianobitcodePalindromeTest < Minitest::Test
   end
 
   # def test_letters
-    # serting strict equality directly.
+    # Aserting strict equality directly.
     # assert "Madam, I'm Adam.".letters == "MadamImAdam"
 
-    # native assertion
+    # Native assertion
     # assert_equal "MadamImAdam", "Madam, I'm Adam.".letters
   # end
+
+  def test_integer_non_palindrome
+    refute 12345.palindrome?
+  end
+
+  def test_integer_palindrome
+    assert 12321.palindrome?
+  end
 
   def test_putting_a_test_onhold
     skip
