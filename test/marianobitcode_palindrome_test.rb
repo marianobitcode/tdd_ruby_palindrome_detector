@@ -35,6 +35,11 @@ class MarianobitcodePalindromeTest < Minitest::Test
     assert 12321.palindrome?
   end
 
+  def test_string_of_spaces
+    refute "".palindrome?
+    refute " ".palindrome?
+  end
+
   def test_putting_a_test_onhold
     skip
   end

@@ -4,8 +4,12 @@ module MarianobitcodePalindrome
 
   # Returns true for a palindrome, false otherwise.
   def palindrome?
-    processed_content == processed_content.reverse
-  end
+    if processed_content.empty?
+      false
+    else
+      processed_content == processed_content.reverse
+    end
+end
 
   # Returns the letters in the string.
   # def letters
